@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load admin_urls %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% block content %}
+<div class="d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+  <div class="col-lg-6">
+    <div class="card border-0 shadow-lg">
+      <div class="card-body p-5">
+        <h2 class="card-title mb-4 text-center">Login</h2>
+        <form class="site-form" action="/login/" method="post">
+          {% csrf_token %}
+          <div class="form-group text-center mb-4">
+            <label for="username">Username:</label>
+            <div class="input-group justify-content-center">
+
+              {{ form.username }}
+            </div>
+          </div>
+          <div class="form-group text-center mb-4">
+            <label for="password">Password:</label>
+            <div class="input-group justify-content-center">
+
+              {{ form.password }}
+            </div>
+          </div>
+          <div class="form-group text-center mb-4">
+            <button type="submit" class="btn btn-success">Login</button>
+          </div>
+        </form>
+        <div class="text-center">
+          <p class="mb-0">Don't have an account?</p>
+          <a href="/register/" class="btn btn-link btn-sm">Create an account</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+    body {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    .card {
+        position: relative;
+        top: -30px;
+    }
+
+    .fa-user-circle:before {
+        content: "\f2bd";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 20px;
+        color: #a7a7a7;
+    }
+
+    .fa-key:before {
+        content: "\f084";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 20px;
+        color: #a7a7a7;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+</style>
+    <script>
+    setTimeout(function (){
+        if ($('#msg').length > 0){
+            $('#msg').remove();
+        }
+    }, 3000)
+{% endblock %}
+
+
+
+
