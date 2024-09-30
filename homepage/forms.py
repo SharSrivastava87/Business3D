@@ -11,4 +11,4 @@ class ThreeDPrintOrderForm(forms.ModelForm):
 class LaserEngravingOrderForm(forms.ModelForm):
     class Meta:
         model = LaserEngravingOrder
-        fields = ['item_description', 'bmp_file', 'description']
+        fields = ['item_description', 'bmp_file', 'what_material']

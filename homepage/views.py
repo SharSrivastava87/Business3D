@@ -1,21 +1,13 @@
-from django.shortcuts import render
 
-# Create your views here.
-from django.shortcuts import render
 def home(request):
     return render(request, 'index.html', {})
 
 def price(request):
     return render(request, 'pricing.html', {})
 
-# views.py
+def terms(request):
+    return render(request, 'Terms&Conditions.html', {})
 
-from django.shortcuts import render, redirect
-from .forms import ThreeDPrintOrderForm, LaserEngravingOrderForm
-
-# views.py
-
-from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from .forms import ThreeDPrintOrderForm
 

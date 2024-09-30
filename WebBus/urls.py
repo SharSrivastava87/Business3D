@@ -27,6 +27,7 @@ urlpatterns = [
     path('', include('register.urls')),
     path('order/3dprint', views.three_d_print_order, name='three_d_print_order'),
     path('order/laserengraving', views.laser_engraving_order, name='laser_engraving_order'),
+    path('Terms&Conditions/', views.terms, name="terms"),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
